@@ -1,4 +1,657 @@
-- content_for :head do
-  %title The Middleman!
-
-%h1 The Middleman is watching.
+#block-text.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.active.first
+        %a{:href => "#block-text"} Text!
+      %li
+        %a{:href => "#block-tables"} Tables
+      %li
+        %a{:href => "#block-innernav"} Sub-nav
+      %li
+        %a{:href => "#block-forms"} Forms
+      %li
+        %a{:href => "#block-messages"} Messages
+      %li
+        %a{:href => "#block-forms-2"} 2 Cols Forms
+      %li
+        %a{:href => "#block-attrtastic"} Attrtastic
+      %li
+        %a{:href => "#block-formtastic"} Formtastic
+      %li
+        %a{:href => "#block-lists"} Lists
+  .content
+    .control
+      %a.button{:href => "#"}
+        %img{:alt => "Edit", :src => "stylesheets/themes/activo/images/icons/edit.png"}/
+        Edit
+    %h2.title Text
+    .inner
+      %p.first
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        = succeed "," do
+          %span.hightlight Excepteur sint occaecat cupidatat non proident
+        sunt in culpa qui officia deserunt mollit anim id est laborum.
+      %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+      %hr/
+      %p
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        = succeed "," do
+          %span.hightlight Excepteur sint occaecat cupidatat non proident
+        sunt in culpa qui officia deserunt mollit anim id est laborum.
+  .breadcrumb
+    %ul
+      %li.first
+        %a{:href => "#"} Breadcrumbs
+      %li
+        %a{:href => "#"} Simple
+      %li.active Example
+#block-tables.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first
+        %a{:href => "#block-text"} Text
+      %li.active
+        %a{:href => "#block-tables"} Tables
+      %li
+        %a{:href => "#block-innernav"} Sub-nav
+      %li
+        %a{:href => "#block-forms"} Forms
+      %li
+        %a{:href => "#block-messages"} Messages
+      %li
+        %a{:href => "#block-forms-2"} 2 Cols Forms
+      %li
+        %a{:href => "#block-attrtastic"} Attrtastic
+      %li
+        %a{:href => "#block-formtastic"} Formtastic
+      %li
+        %a{:href => "#block-lists"} Lists
+  .content
+    .control
+      %a.button{:href => "#"}
+        %img{:alt => "Add", :src => "stylesheets/themes/activo/images/icons/add.png"}/
+        Add
+      %a.button{:href => "#"}
+        %img{:alt => "Remove", :src => "stylesheets/themes/activo/images/icons/delete.png"}/
+        Remove
+    %h2.title Tables
+    .inner
+      %form.form{:action => "#"}
+        %table.table
+          %tr
+            %th.first
+              %input.checkbox.toggle{:type => "checkbox"}/
+            %th ID
+            %th Login
+            %th Name
+            %th Surname
+            %th.last &nbsp;
+          %tr.odd
+            %td
+              %input.checkbox{:name => "id", :type => "checkbox", :value => "1"}/
+            %td 1
+            %td hulk
+            %td Hulk
+            %td Hogan
+            %td.last
+              %a{:href => "#"}
+                %img{:alt => "Show", :onmouseout => "this.src='stylesheets/themes/activo/images/icons/24/show.png'", :onmouseover => "this.src='stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'", :src => "stylesheets/themes/activo/images/icons/24/show.png", :title => "Show"}/
+              %a{:href => "#"}
+                %img{:alt => "Edit", :onmouseout => "this.src='stylesheets/themes/activo/images/icons/24/edit.png'", :onmouseover => "this.src='stylesheets/themes/activo/images/icons/24/edit-hover.png'", :src => "stylesheets/themes/activo/images/icons/24/edit.png", :title => "Edit"}/
+              %a{:href => "#"}
+                %img{:alt => "Download", :onmouseout => "this.src='stylesheets/themes/activo/images/icons/24/download.png'", :onmouseover => "this.src='stylesheets/themes/activo/images/icons/24/download-hover.png'", :src => "stylesheets/themes/activo/images/icons/24/download.png", :title => "Download"}/
+          %tr.even
+            %td
+              %input.checkbox{:name => "id", :type => "checkbox", :value => "1"}/
+            %td 2
+            %td ultimate
+            %td Ultimate
+            %td Warrior
+            %td.last
+              %a{:href => "#"}
+                %img{:alt => "Show", :onmouseout => "this.src='stylesheets/themes/activo/images/icons/24/show.png'", :onmouseover => "this.src='stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'", :src => "stylesheets/themes/activo/images/icons/24/show.png", :title => "Show"}/
+              %a{:href => "#"}
+                %img{:alt => "Edit", :onmouseout => "this.src='stylesheets/themes/activo/images/icons/24/edit.png'", :onmouseover => "this.src='stylesheets/themes/activo/images/icons/24/edit-hover.png'", :src => "stylesheets/themes/activo/images/icons/24/edit.png", :title => "Edit"}/
+              %a{:href => "#"}
+                %img{:alt => "Download", :onmouseout => "this.src='stylesheets/themes/activo/images/icons/24/download.png'", :onmouseover => "this.src='stylesheets/themes/activo/images/icons/24/download-hover.png'", :src => "stylesheets/themes/activo/images/icons/24/download.png", :title => "Download"}/
+          %tr.odd
+            %td
+              %input.checkbox{:name => "id", :type => "checkbox", :value => "1"}/
+            %td 3
+            %td andre
+            %td Andre
+            %td The Giant
+            %td.last
+              %a{:href => "#"}
+                %img{:alt => "Show", :onmouseout => "this.src='stylesheets/themes/activo/images/icons/24/show.png'", :onmouseover => "this.src='stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'", :src => "stylesheets/themes/activo/images/icons/24/show.png", :title => "Show"}/
+              %a{:href => "#"}
+                %img{:alt => "Edit", :onmouseout => "this.src='stylesheets/themes/activo/images/icons/24/edit.png'", :onmouseover => "this.src='stylesheets/themes/activo/images/icons/24/edit-hover.png'", :src => "stylesheets/themes/activo/images/icons/24/edit.png", :title => "Edit"}/
+              %a{:href => "#"}
+                %img{:alt => "Download", :onmouseout => "this.src='stylesheets/themes/activo/images/icons/24/download.png'", :onmouseover => "this.src='stylesheets/themes/activo/images/icons/24/download-hover.png'", :src => "stylesheets/themes/activo/images/icons/24/download.png", :title => "Download"}/
+          %tr.even
+            %td
+              %input.checkbox{:name => "id", :type => "checkbox", :value => "1"}/
+            %td 4
+            %td machoman
+            %td Macho Man
+            %td Randy Savage
+            %td.last
+              %a{:href => "#"}
+                %img{:alt => "Show", :onmouseout => "this.src='stylesheets/themes/activo/images/icons/24/show.png'", :onmouseover => "this.src='stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'", :src => "stylesheets/themes/activo/images/icons/24/show.png", :title => "Show"}/
+              %a{:href => "#"}
+                %img{:alt => "Edit", :onmouseout => "this.src='stylesheets/themes/activo/images/icons/24/edit.png'", :onmouseover => "this.src='stylesheets/themes/activo/images/icons/24/edit-hover.png'", :src => "stylesheets/themes/activo/images/icons/24/edit.png", :title => "Edit"}/
+              %a{:href => "#"}
+                %img{:alt => "Download", :onmouseout => "this.src='stylesheets/themes/activo/images/icons/24/download.png'", :onmouseover => "this.src='stylesheets/themes/activo/images/icons/24/download-hover.png'", :src => "stylesheets/themes/activo/images/icons/24/download.png", :title => "Download"}/
+        .pagination
+          %span.disabled.prev_page « Previous
+          %span.current 1
+          %a{:href => "#", :rel => "next"} 2
+          %a{:href => "#"} 3
+          %a{:href => "#"} 4
+          %a{:href => "#"} 5
+          %a.next_page{:href => "#", :rel => "next"} Next »
+      %form.search{:action => "#"}
+        .columns.wat-cf
+          .column.right
+            %input.search_submit{:name => "commit", :type => "submit", :value => ""}/
+            %input#search.search_box{:name => "search", :onblur => "if (!value) { value = 'Search' }", :onfocus => "if (value == 'Search') { value = '' }", :type => "text", :value => "Search"}/
+      .wat-cf
+#block-innernav.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first
+        %a{:href => "#block-text"} Text
+      %li
+        %a{:href => "#block-tables"} Tables
+      %li.active
+        %a{:href => "#block-innernav"} Sub-nav
+      %li
+        %a{:href => "#block-forms"} Forms
+      %li
+        %a{:href => "#block-messages"} Messages
+      %li
+        %a{:href => "#block-forms-2"} 2 Cols Forms
+      %li
+        %a{:href => "#block-attrtastic"} Attrtastic
+      %li
+        %a{:href => "#block-formtastic"} Formtastic
+      %li
+        %a{:href => "#block-lists"} Lists
+  .content
+    %h2.title
+      Cicero
+    .control{:style => "margin-top:-7px; margin-right:8px;"}
+      %a.button{:href => "#"}
+        %img{:alt => "Export", :src => "stylesheets/themes/activo/images/icons/pdf.png"}/
+        Export list
+    .inner
+      %h3.title
+        Finibus
+      %table.table{:style => "margin-bottom: 0px;"}
+        %tr
+          %th Reference
+          %th Param 1
+          %th Param 2
+          %th Param 3
+          %th Param 4
+          %th Param 5
+          %th Param 6
+          %th Time
+          %th.last{:style => "width:40px;"}
+        %tr.even
+          %td
+            %a.anchor{:href => "#tempore"} Tempore
+          %td 21
+          %td 21
+          %td 0
+          %td 6
+          %td 4
+          %td 8
+          %td -
+          %td.last
+            %a.anchor{:href => "#tempore"}
+              %img{:alt => "Malorum", :onmouseout => "this.src='stylesheets/themes/activo/images/icons/24/anchor.png'", :onmouseover => "this.src='stylesheets/themes/activo/images/icons/24/anchor-hover.png'", :src => "stylesheets/themes/activo/images/icons/24/anchor.png", :title => "Malorum"}/
+        %tr.odd
+          %td
+            %a.anchor{:href => "#tempore"} Soluta
+          %td 0
+          %td 0
+          %td 0
+          %td 0
+          %td 0
+          %td 0
+          %td -
+          %td.last
+            %a.anchor{:href => "#tempore"}
+              %img{:alt => "Malorum", :onmouseout => "this.src='stylesheets/themes/activo/images/icons/24/anchor.png'", :onmouseover => "this.src='stylesheets/themes/activo/images/icons/24/anchor-hover.png'", :src => "stylesheets/themes/activo/images/icons/24/anchor.png", :title => "Malorum"}/
+        %tr.even
+          %td{:style => "font-style: italic;"} Total
+          %td 21
+          %td 21
+          %td 0
+          %td 6
+          %td 4
+          %td 8
+          %td -
+          %td.last
+    .control{:style => "margin-top:2px; margin-right:8px;"}
+      %a.button{:href => "#"}
+        %img{:alt => "Add item", :src => "stylesheets/themes/activo/images/icons/add.png"}/
+        Add item
+      %a.button{:href => "#"}
+        %img{:alt => "Send email", :src => "stylesheets/themes/activo/images/icons/send-mail.png"}/
+        Send email
+    .inner
+      %h3.title
+        Bonorum
+      .block-norounded
+        #mask
+          .secondary-inner-nav
+            %ul.wat-cf
+              %li.first.active
+                %a{:href => "#"} Neque
+              %li
+                %a{:href => "#"} Quisquam
+              %li
+                %a{:href => "#"} Dolorem
+              %li
+                %a{:href => "#"} Ipsum
+              %li
+                %a{:href => "#"} Dolor
+              %li
+                %a{:href => "#"} Consectetur
+          .inner
+            %h4#tempore.title
+              Malorum
+            %table.table
+              %tr
+                %td There is no spoon
+            .wat-cf
+  .breadcrumb
+    %ul
+      %li.first
+        %a{:href => "#"} Lorem
+      %li
+        %a{:href => "#"} Ipsum
+      %li
+        %a{:href => "#"} Dolor
+      %li
+        %a{:href => "#"} Sit
+      %li
+        %a{:href => "#"} Ammet
+      %li.active Consectetur
+#block-forms.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first
+        %a{:href => "#block-text"} Text
+      %li
+        %a{:href => "#block-tables"} Tables
+      %li
+        %a{:href => "#block-innernav"} Sub-nav
+      %li.active
+        %a{:href => "#block-forms"} Forms
+      %li
+        %a{:href => "#block-messages"} Messages
+      %li
+        %a{:href => "#block-forms-2"} 2 Cols Forms
+      %li
+        %a{:href => "#block-attrtastic"} Attrtastic
+      %li
+        %a{:href => "#block-formtastic"} Formtastic
+      %li
+        %a{:href => "#block-lists"} Lists
+  .content
+    .control
+      %a.button{:href => "#"}
+        %img{:alt => "Show", :src => "stylesheets/themes/activo/images/icons/show.png"}/
+        Show
+    %h2.title Forms
+    .inner
+      %form.form{:action => "#", :method => "get"}
+        .group
+          %label.label Text field
+          %input.text_field{:type => "text"}/
+          %span.description Ex: a simple text
+        .group
+          .fieldWithErrors
+            %label.label Title
+            %span.error can't be blank
+          %input.text_field{:type => "text"}/
+        .group
+          %label.label Text area
+          %textarea.text_area{:cols => "80", :rows => "10"}
+          %span.description Write here a long text
+        .group
+          %label.label Upload a file
+          %input{:type => "file"}/
+        .group.navform.wat-cf
+          %button.button{:type => "submit"}
+            %img{:alt => "Save", :src => "stylesheets/themes/activo/images/icons/tick.png"}/
+            Save
+          %a.button{:href => "#header"}
+            %img{:alt => "Cancel", :src => "stylesheets/themes/activo/images/icons/cross.png"}/
+            Cancel
+#block-messages.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first
+        %a{:href => "#block-text"} Text
+      %li
+        %a{:href => "#block-tables"} Tables
+      %li
+        %a{:href => "#block-innernav"} Sub-nav
+      %li
+        %a{:href => "#block-forms"} Forms
+      %li.active
+        %a{:href => "#block-messages"} Messages
+      %li
+        %a{:href => "#block-forms-2"} 2 Cols Forms
+      %li
+        %a{:href => "#block-attrtastic"} Attrtastic
+      %li
+        %a{:href => "#block-formtastic"} Formtastic
+      %li
+        %a{:href => "#block-lists"} Lists
+  .content
+    %h2.title Messages
+    .inner
+      .flash
+        .message.error
+          %p Error message
+        .message.warning
+          %p Warning message
+        .message.notice
+          %p Notice message
+#block-forms-2.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first
+        %a{:href => "#block-text"} Text
+      %li
+        %a{:href => "#block-tables"} Tables
+      %li
+        %a{:href => "#block-innernav"} Sub-nav
+      %li
+        %a{:href => "#block-forms"} Forms
+      %li
+        %a{:href => "#block-messages"} Messages
+      %li.active
+        %a{:href => "#block-forms-2"} 2 Cols Forms
+      %li
+        %a{:href => "#block-attrtastic"} Attrtastic
+      %li
+        %a{:href => "#block-formtastic"} Formtastic
+      %li
+        %a{:href => "#block-lists"} Lists
+  .content
+    %h2.title 2 Cols Forms
+    .inner
+      %form.form{:action => "#", :method => "get"}
+        .columns.wat-cf
+          .column.left
+            .group
+              %label.label Text field
+              %input.text_field{:type => "text"}/
+            .group
+              %label.label Text area
+              %textarea.text_area{:cols => "80", :rows => "10"}
+          .column.right
+            .group
+              %label.label Select
+              %select
+                %option{:value => "1"} Choose...
+            .group
+              %label.label Check box
+              %div
+                %input#checkbox_1.checkbox{:name => "checkbox", :type => "checkbox", :value => "1"}/
+                %label.checkbox{:for => "checkbox_1"} Option 1
+              %div
+                %input#checkbox_2.checkbox{:name => "checkbox", :type => "checkbox", :value => "2"}/
+                %label.checkbox{:for => "checkbox_2"} Option 2
+            .group
+              %label.label Radio
+              %div
+                %input#radio_1.checkbox{:name => "radio", :type => "radio", :value => "1"}/
+                %label.radio{:for => "radio_1"} Option 1
+              %div
+                %input#radio_2.checkbox{:name => "radio", :type => "radio", :value => "2"}/
+                %label.radio{:for => "radio_2"} Option 2
+        .group.navform.wat-cf
+          %button.button{:type => "submit"}
+            %img{:alt => "Save", :src => "stylesheets/themes/activo/images/icons/tick.png"}/
+            Save
+          %a.button{:href => "#header"}
+            %img{:alt => "Cancel", :src => "stylesheets/themes/activo/images/icons/cross.png"}/
+            Cancel
+#block-attrtastic.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first
+        %a{:href => "#block-text"} Text
+      %li
+        %a{:href => "#block-tables"} Tables
+      %li
+        %a{:href => "#block-innernav"} Sub-nav
+      %li
+        %a{:href => "#block-forms"} Forms
+      %li
+        %a{:href => "#block-messages"} Messages
+      %li
+        %a{:href => "#block-forms-2"} 2 Cols Forms
+      %li.active
+        %a{:href => "#block-attrtastic"} Attrtastic
+      %li
+        %a{:href => "#block-formtastic"} Formtastic
+      %li
+        %a{:href => "#block-lists"} Lists
+  .content
+    .control
+      %a.button{:href => "#"}
+        %img{:alt => "Export", :src => "stylesheets/themes/activo/images/icons/pdf.png"}/
+        Export
+      %a.button{:href => "#"}
+        %img{:alt => "Edit", :src => "stylesheets/themes/activo/images/icons/application_edit.png"}/
+        Edit
+    %h2.title
+      %a{:href => "http://github.com/MBO/attrtastic"} Attrtastic
+      integration
+    .inner
+      .attrtastic.example
+        .column_left
+          .attributes
+            %ol
+              %li.attribute
+                %span.label Dolor
+                %span.value Sit amet
+        .column_right
+          .attributes
+            %ol
+              %li.attribute
+                %span.label Consectetur
+                %span.value 528491
+        .attributes
+          %ol
+            %li.attribute
+              %span.label Adipisicing elit
+              %span.value Aliquip
+        .column_left
+          .attributes
+            %ol
+              %li.attribute
+                %span.label Incididunt
+                %span.value Officia
+              %li.attribute
+                %span.label Labore
+                %span.value Ut enim ad minim veniam
+        .column_right
+          .attributes
+            %ol
+              %li.attribute
+                %span.label Eiusmod Tempor
+                %span.value 4 8 15 16 23 42
+              %li.attribute
+                %span.label Laboris nisi
+                %span.value
+        .attributes
+          %ol
+            %li.attribute
+              %span.label Pariatur
+              %span.value Excepteur sint occaecat cupidatat non proident
+        .attributes
+          %ol/
+          %hr/
+        .column_left
+          .attributes
+            %ol
+              %li.attribute
+                %span.label Sunt in culpa
+                %span.value Irure dolor
+              %li.attribute
+                %span.label Deserunt mollit
+                %span.value Fugiat nulla
+        .column_right
+          .attributes
+            %ol
+              %li.attribute
+                %span.label Laborum
+                %span.value Voluptate
+              %li.attribute
+                %span.label Consequat
+                %span.value Velit
+              %li.attribute
+                %span.label Reprehenderit
+                %span.value Cillum dolore
+      .wat-cf
+#block-formtastic.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first
+        %a{:href => "#block-text"} Text
+      %li
+        %a{:href => "#block-tables"} Tables
+      %li
+        %a{:href => "#block-innernav"} Sub-nav
+      %li
+        %a{:href => "#block-forms"} Forms
+      %li
+        %a{:href => "#block-messages"} Messages
+      %li
+        %a{:href => "#block-forms-2"} 2 Cols Forms
+      %li
+        %a{:href => "#block-attrtastic"} Attrtastic
+      %li.active
+        %a{:href => "#block-formtastic"} Formtastic
+      %li
+        %a{:href => "#block-lists"} Lists
+  .content
+    %h2.title
+      %a{:href => "http://github.com/justinfrench/formtastic"} Formtastic
+    .badge-grey with date picker
+    .inner
+      %form.formtastic.example{:action => "#", :method => "post"}
+        %fieldset.column_left
+          %ol
+            %li#example_name_input.string.required
+              %label{:for => "example_name"} Lorem ipsum *
+              %input#example_name{:maxlength => "255", :name => "example[name]", :size => "50", :type => "text", :value => "His senserit voluptatum ut"}/
+              %p.inline-hints
+                Usu ei nonummy consetetur sadipscing
+        %fieldset.column_right
+          %ol
+            %li#example_homero_input.string.required
+              %label{:for => "example_homero"} Homero *
+              %input#example_homero{:maxlength => "255", :name => "example[homero]", :size => "50", :type => "text", :value => "12345"}/
+        %fieldset.inputs
+        %fieldset.inputs
+          %ol
+            %li#example_fastidii_input.text.optional
+              %label{:for => "example_fastidii"} Fastidii
+              %textarea#example_fastidii{:cols => "50", :name => "example[fastidii]", :rows => "3"}
+        %fieldset.column_left
+          %ol
+            %li#example_repudiare_input.string.optional
+              %label{:for => "example_repudiare"} Melius repudiare
+              %input#example_repudiare{:maxlength => "255", :name => "example[repudiare]", :size => "50", :type => "text", :value => ""}/
+            %li#example_epicurei_input.datepicker.optional
+              %label{:for => "example_epicurei"} Movet epicurei
+              %input#example_epicurei.ui-datepicker{:name => "example[epicurei]", :size => "50", :type => "text"}/
+        %fieldset.column_right
+          %ol
+            %li#example_mandamus_input.string.optional
+              %label{:for => "example_mandamus"} Mandamus
+              %input#example_mandamus{:disabled => "disabled", :maxlength => "255", :name => "example[mandamus]", :size => "50", :type => "text", :value => ""}/
+            %li#example_consectetuer_input.datepicker.optional
+              %label{:for => "example_consectetuer"} Consectetuer
+              %input#example_consectetuer.ui-datepicker{:name => "example[consectetuer]", :size => "50", :type => "text"}/
+        %fieldset.inputs
+          %hr/
+        %fieldset.inputs
+          %ol
+            %li#example_state_input.radio.optional
+              %fieldset
+                %legend.label
+                  %label State
+                %ol
+                  %li
+                    %label
+                      %input{:checked => "checked", :name => "example[state]", :type => "radio", :value => "0"}/
+                      Theophrastus
+                  %li
+                    %label
+                      %input{:name => "example[state]", :type => "radio", :value => "1"}/
+                      Posidonium
+                  %li
+                    %label
+                      %input{:name => "example[state]", :type => "radio", :value => "2"}/
+                      Copiosae
+        .group.navform.wat-cf
+          %button.button{:type => "submit"}
+            %img{:alt => "Save", :src => "stylesheets/themes/activo/images/icons/tick.png"}/
+            Save
+          %a.button{:href => "#header"}
+            %img{:alt => "Cancel", :src => "stylesheets/themes/activo/images/icons/cross.png"}/
+            Cancel
+#block-lists.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first
+        %a{:href => "#block-text"} Text
+      %li
+        %a{:href => "#block-tables"} Tables
+      %li
+        %a{:href => "#block-innernav"} Sub-nav
+      %li
+        %a{:href => "#block-forms"} Forms
+      %li
+        %a{:href => "#block-messages"} Messages
+      %li
+        %a{:href => "#block-forms-2"} 2 Cols Forms
+      %li
+        %a{:href => "#block-attrtastic"} Attrtastic
+      %li
+        %a{:href => "#block-formtastic"} Formtastic
+      %li.active
+        %a{:href => "#block-lists"} Lists
+  .content
+    %h2.title Lists
+    .inner
+      %ul.list
+        %li
+          .left
+            %a{:href => "#"}
+              %img.avatar{:alt => "avatar", :src => "stylesheets/themes/activo/images/avatar.png"}/
+          .item
+            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        %li
+          .left
+            %a{:href => "#"}
+              %img.avatar{:alt => "avatar", :src => "stylesheets/themes/activo/images/avatar.png"}/
+          .item
+            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        %li
+          .left
+            %a{:href => "#"}
+              %img.avatar{:alt => "avatar", :src => "stylesheets/themes/activo/images/avatar.png"}/
+          .item
+            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

@@ -15,6 +15,11 @@ Sinatra::Base.mime_type :woff, "application/x-font-woff"
 # With alternative layout
 # page "/path/to/file.html", :layout => :otherlayout
 
+with_layout :bare do
+  page "/sign*"
+end
+
+
 # Helpers
 helpers do
   def some_helper(*args)

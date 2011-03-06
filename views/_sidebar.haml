@@ -1,0 +1,41 @@
+#sidebar
+  .block
+    %h3 Examples
+    %ul.navigation
+      - %w[Homepage Dashboard].each do |model|
+        %li= link_to model, "#block-#{model.downcase}", :class => "anchor"
+  .block
+    %h3 Models
+    %ul.navigation
+      - %w[Division Draft League Fan Player].each do |model|
+        %li= link_to model, "#block-#{model.downcase}", :class => "anchor"
+  .block.notice
+    %h4 Notice Title
+    %p Morbi posuere urna vitae nunc. Curabitur ultrices, lorem ac aliquam blandit, lectus eros hendrerit eros, at eleifend libero ipsum hendrerit urna. Suspendisse viverra. Morbi ut magna. Praesent id ipsum. Sed feugiat ipsum ut felis. Fusce vitae nibh sed risus commodo pulvinar. Duis ut dolor. Cras ac erat pulvinar tortor porta sodales. Aenean tempor venenatis dolor.
+  .block
+    .sidebar-block
+      %h4 Credits
+      %p
+        %a{:href => "http://pixelmatrixdesign.com/uniform/"} Jquery Uniform
+        \- Uniform look and feel of form elements between browsers
+      %p
+        %a{:href => "http://glyphish.com/"} Glyphish iconset
+        \- Icons of the top-right corner
+      %p
+        %a{:href => "http://gentleface.com/free_icon_set.html"} Gentleface Wireframe Toolbar Icons
+        \- Logout icon
+      %p
+        %a{:href => "http://www.josbuivenga.demon.nl/museo.html"} Museo font
+        \- Sans 500, Sans 500 Italic, 700
+      %p
+        %a{:href => "http://dribbble.com/"} Dribbble.com
+        \- Great place to find inspiration
+      %p
+        %a{:href => "http://p.yusukekamiyamane.com/"} Fugue icons
+        \- Iconset by Yusuke Kamiyamane
+      %p
+        %a{:href => "http://mynameisraj.com/"} Raj Ramamurthy
+        \- Made the dropdown menu and helped me with the buttons!
+      %p
+        %a{:href => "http://gravityblast.com/"} Andrea Franz
+        \- He's the author of the web-app-theme rails plugin
