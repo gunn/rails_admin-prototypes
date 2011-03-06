@@ -7,8 +7,6 @@
     = stylesheet_link_tag *%w[base jquery-ui formtastic jquery.tipsy uniform.default]
     %link#current-theme{:href => "stylesheets/themes/activo/style.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}
     = javascript_include_tag *%w[http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js jquery-ui.min jquery.scrollTo jquery.localscroll application jquery.tipsy  jquery.uniform.min]
-    = yield_content :head
-    
     %body
       #container
         #header
@@ -43,7 +41,7 @@
               .secondary-navigation
                 %ul.wat-cf
                   %li.active.first
-                    %a{:href => "#block-text"} Text
+                    %a{:href => "#block-text"} Text!
                   %li
                     %a{:href => "#block-tables"} Tables
                   %li
@@ -702,24 +700,13 @@
             .block
               %h3 Examples
               %ul.navigation
-                %li
-                  %a.anchor{:href => "#block-text"} Text
-                %li
-                  %a.anchor{:href => "#block-tables"} Tables
-                %li
-                  %a.anchor{:href => "#block-innernav"} Sub-nav
-                %li
-                  %a.anchor{:href => "#block-forms"} Forms
-                %li
-                  %a.anchor{:href => "#block-messages"} Messages
-                %li
-                  %a.anchor{:href => "#block-forms-2"} 2 Cols Forms
-                %li
-                  %a.anchor{:href => "#block-attrtastic"} Attrtastic
-                %li
-                  %a.anchor{:href => "#block-formtastic"} Formtastic
-                %li
-                  %a.anchor{:href => "#block-lists"} Lists
+                - %w[Homepage Dashboard].each do |model|
+                  %li= link_to model, "#block-#{model.downcase}", :class => "anchor"
+            .block
+              %h3 Models
+              %ul.navigation
+                - %w[Division Draft League Fan Player].each do |model|
+                  %li= link_to model, "#block-#{model.downcase}", :class => "anchor"
             .block.notice
               %h4 Notice Title
               %p Morbi posuere urna vitae nunc. Curabitur ultrices, lorem ac aliquam blandit, lectus eros hendrerit eros, at eleifend libero ipsum hendrerit urna. Suspendisse viverra. Morbi ut magna. Praesent id ipsum. Sed feugiat ipsum ut felis. Fusce vitae nibh sed risus commodo pulvinar. Duis ut dolor. Cras ac erat pulvinar tortor porta sodales. Aenean tempor venenatis dolor.
