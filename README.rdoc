@@ -1,0 +1,7 @@
+= Rails Admin Mockups
+
+This project contains mockups for the rails_admin[https://github.com/sferik/rails_admin] project. They are currently focussed on trying to figure out how best to integrate the {activo theme}[http://activo.dmfranc.com/] into it.
+
+
+
+Started 2011, Arthur Gunn, released under the MIT license.
