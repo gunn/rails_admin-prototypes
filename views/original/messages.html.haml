@@ -1,0 +1,31 @@
+#block-messages.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first
+        %a{:href => "#block-text"} Text
+      %li
+        %a{:href => "#block-tables"} Tables
+      %li
+        %a{:href => "#block-innernav"} Sub-nav
+      %li
+        %a{:href => "#block-forms"} Forms
+      %li.active
+        %a{:href => "#block-messages"} Messages
+      %li
+        %a{:href => "#block-forms-2"} 2 Cols Forms
+      %li
+        %a{:href => "#block-attrtastic"} Attrtastic
+      %li
+        %a{:href => "#block-formtastic"} Formtastic
+      %li
+        %a{:href => "#block-lists"} Lists
+  .content
+    %h2.title Messages
+    .inner
+      .flash
+        .message.error
+          %p Error message
+        .message.warning
+          %p Warning message
+        .message.notice
+          %p Notice message

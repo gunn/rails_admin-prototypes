@@ -1,0 +1,47 @@
+#block-text.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.active.first
+        %a{:href => "#block-text"} Text!
+      %li
+        %a{:href => "#block-tables"} Tables
+      %li
+        %a{:href => "#block-innernav"} Sub-nav
+      %li
+        %a{:href => "#block-forms"} Forms
+      %li
+        %a{:href => "#block-messages"} Messages
+      %li
+        %a{:href => "#block-forms-2"} 2 Cols Forms
+      %li
+        %a{:href => "#block-attrtastic"} Attrtastic
+      %li
+        %a{:href => "#block-formtastic"} Formtastic
+      %li
+        %a{:href => "#block-lists"} Lists
+  .content
+    .control
+      %a.button{:href => "#"}
+        %img{:alt => "Edit", :src => "stylesheets/themes/activo/images/icons/edit.png"}/
+        Edit
+    %h2.title Text
+    .inner
+      %p.first
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        = succeed "," do
+          %span.hightlight Excepteur sint occaecat cupidatat non proident
+        sunt in culpa qui officia deserunt mollit anim id est laborum.
+      %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+      %hr/
+      %p
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        = succeed "," do
+          %span.hightlight Excepteur sint occaecat cupidatat non proident
+        sunt in culpa qui officia deserunt mollit anim id est laborum.
+  .breadcrumb
+    %ul
+      %li.first
+        %a{:href => "#"} Breadcrumbs
+      %li
+        %a{:href => "#"} Simple
+      %li.active Example

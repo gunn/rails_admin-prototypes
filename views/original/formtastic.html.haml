@@ -1,0 +1,89 @@
+#block-formtastic.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first
+        %a{:href => "#block-text"} Text
+      %li
+        %a{:href => "#block-tables"} Tables
+      %li
+        %a{:href => "#block-innernav"} Sub-nav
+      %li
+        %a{:href => "#block-forms"} Forms
+      %li
+        %a{:href => "#block-messages"} Messages
+      %li
+        %a{:href => "#block-forms-2"} 2 Cols Forms
+      %li
+        %a{:href => "#block-attrtastic"} Attrtastic
+      %li.active
+        %a{:href => "#block-formtastic"} Formtastic
+      %li
+        %a{:href => "#block-lists"} Lists
+  .content
+    %h2.title
+      %a{:href => "http://github.com/justinfrench/formtastic"} Formtastic
+    .badge-grey with date picker
+    .inner
+      %form.formtastic.example{:action => "#", :method => "post"}
+        %fieldset.column_left
+          %ol
+            %li#example_name_input.string.required
+              %label{:for => "example_name"} Lorem ipsum *
+              %input#example_name{:maxlength => "255", :name => "example[name]", :size => "50", :type => "text", :value => "His senserit voluptatum ut"}/
+              %p.inline-hints
+                Usu ei nonummy consetetur sadipscing
+        %fieldset.column_right
+          %ol
+            %li#example_homero_input.string.required
+              %label{:for => "example_homero"} Homero *
+              %input#example_homero{:maxlength => "255", :name => "example[homero]", :size => "50", :type => "text", :value => "12345"}/
+        %fieldset.inputs
+        %fieldset.inputs
+          %ol
+            %li#example_fastidii_input.text.optional
+              %label{:for => "example_fastidii"} Fastidii
+              %textarea#example_fastidii{:cols => "50", :name => "example[fastidii]", :rows => "3"}
+        %fieldset.column_left
+          %ol
+            %li#example_repudiare_input.string.optional
+              %label{:for => "example_repudiare"} Melius repudiare
+              %input#example_repudiare{:maxlength => "255", :name => "example[repudiare]", :size => "50", :type => "text", :value => ""}/
+            %li#example_epicurei_input.datepicker.optional
+              %label{:for => "example_epicurei"} Movet epicurei
+              %input#example_epicurei.ui-datepicker{:name => "example[epicurei]", :size => "50", :type => "text"}/
+        %fieldset.column_right
+          %ol
+            %li#example_mandamus_input.string.optional
+              %label{:for => "example_mandamus"} Mandamus
+              %input#example_mandamus{:disabled => "disabled", :maxlength => "255", :name => "example[mandamus]", :size => "50", :type => "text", :value => ""}/
+            %li#example_consectetuer_input.datepicker.optional
+              %label{:for => "example_consectetuer"} Consectetuer
+              %input#example_consectetuer.ui-datepicker{:name => "example[consectetuer]", :size => "50", :type => "text"}/
+        %fieldset.inputs
+          %hr/
+        %fieldset.inputs
+          %ol
+            %li#example_state_input.radio.optional
+              %fieldset
+                %legend.label
+                  %label State
+                %ol
+                  %li
+                    %label
+                      %input{:checked => "checked", :name => "example[state]", :type => "radio", :value => "0"}/
+                      Theophrastus
+                  %li
+                    %label
+                      %input{:name => "example[state]", :type => "radio", :value => "1"}/
+                      Posidonium
+                  %li
+                    %label
+                      %input{:name => "example[state]", :type => "radio", :value => "2"}/
+                      Copiosae
+        .group.navform.wat-cf
+          %button.button{:type => "submit"}
+            %img{:alt => "Save", :src => "stylesheets/themes/activo/images/icons/tick.png"}/
+            Save
+          %a.button{:href => "#header"}
+            %img{:alt => "Cancel", :src => "stylesheets/themes/activo/images/icons/cross.png"}/
+            Cancel

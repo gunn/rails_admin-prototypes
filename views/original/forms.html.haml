@@ -1,0 +1,52 @@
+#block-forms.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first
+        %a{:href => "#block-text"} Text
+      %li
+        %a{:href => "#block-tables"} Tables
+      %li
+        %a{:href => "#block-innernav"} Sub-nav
+      %li.active
+        %a{:href => "#block-forms"} Forms
+      %li
+        %a{:href => "#block-messages"} Messages
+      %li
+        %a{:href => "#block-forms-2"} 2 Cols Forms
+      %li
+        %a{:href => "#block-attrtastic"} Attrtastic
+      %li
+        %a{:href => "#block-formtastic"} Formtastic
+      %li
+        %a{:href => "#block-lists"} Lists
+  .content
+    .control
+      %a.button{:href => "#"}
+        %img{:alt => "Show", :src => "stylesheets/themes/activo/images/icons/show.png"}/
+        Show
+    %h2.title Forms
+    .inner
+      %form.form{:action => "#", :method => "get"}
+        .group
+          %label.label Text field
+          %input.text_field{:type => "text"}/
+          %span.description Ex: a simple text
+        .group
+          .fieldWithErrors
+            %label.label Title
+            %span.error can't be blank
+          %input.text_field{:type => "text"}/
+        .group
+          %label.label Text area
+          %textarea.text_area{:cols => "80", :rows => "10"}
+          %span.description Write here a long text
+        .group
+          %label.label Upload a file
+          %input{:type => "file"}/
+        .group.navform.wat-cf
+          %button.button{:type => "submit"}
+            %img{:alt => "Save", :src => "stylesheets/themes/activo/images/icons/tick.png"}/
+            Save
+          %a.button{:href => "#header"}
+            %img{:alt => "Cancel", :src => "stylesheets/themes/activo/images/icons/cross.png"}/
+            Cancel

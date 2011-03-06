@@ -1,0 +1,61 @@
+#block-forms-2.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first
+        %a{:href => "#block-text"} Text
+      %li
+        %a{:href => "#block-tables"} Tables
+      %li
+        %a{:href => "#block-innernav"} Sub-nav
+      %li
+        %a{:href => "#block-forms"} Forms
+      %li
+        %a{:href => "#block-messages"} Messages
+      %li.active
+        %a{:href => "#block-forms-2"} 2 Cols Forms
+      %li
+        %a{:href => "#block-attrtastic"} Attrtastic
+      %li
+        %a{:href => "#block-formtastic"} Formtastic
+      %li
+        %a{:href => "#block-lists"} Lists
+  .content
+    %h2.title 2 Cols Forms
+    .inner
+      %form.form{:action => "#", :method => "get"}
+        .columns.wat-cf
+          .column.left
+            .group
+              %label.label Text field
+              %input.text_field{:type => "text"}/
+            .group
+              %label.label Text area
+              %textarea.text_area{:cols => "80", :rows => "10"}
+          .column.right
+            .group
+              %label.label Select
+              %select
+                %option{:value => "1"} Choose...
+            .group
+              %label.label Check box
+              %div
+                %input#checkbox_1.checkbox{:name => "checkbox", :type => "checkbox", :value => "1"}/
+                %label.checkbox{:for => "checkbox_1"} Option 1
+              %div
+                %input#checkbox_2.checkbox{:name => "checkbox", :type => "checkbox", :value => "2"}/
+                %label.checkbox{:for => "checkbox_2"} Option 2
+            .group
+              %label.label Radio
+              %div
+                %input#radio_1.checkbox{:name => "radio", :type => "radio", :value => "1"}/
+                %label.radio{:for => "radio_1"} Option 1
+              %div
+                %input#radio_2.checkbox{:name => "radio", :type => "radio", :value => "2"}/
+                %label.radio{:for => "radio_2"} Option 2
+        .group.navform.wat-cf
+          %button.button{:type => "submit"}
+            %img{:alt => "Save", :src => "stylesheets/themes/activo/images/icons/tick.png"}/
+            Save
+          %a.button{:href => "#header"}
+            %img{:alt => "Cancel", :src => "stylesheets/themes/activo/images/icons/cross.png"}/
+            Cancel
