@@ -16,7 +16,7 @@ Sinatra::Base.mime_type :woff, "application/x-font-woff"
 # page "/path/to/file.html", :layout => :otherlayout
 
 with_layout :bare do
-  page "/sign*"
+  page "/original/sign*"
 end
 
 
