@@ -1,0 +1,16 @@
+#header
+  %h1
+  #user-navigation
+    %ul.wat-cf
+      - { :home => "Dashboard", :account => "Profile", :config => "Preferences", :logout => "Logout" }.each do |image, title|
+        %li= link_to icon(image, title), '#'
+  #main-navigation
+    %ul.wat-cf
+      %li.first
+        %a.anchor{:href => "#block-text"} Main Page
+      %li.active
+        %a.anchor{:href => "#block-text"} Active
+      %li
+        %a.anchor{:href => "#block-login"} Login
+      %li
+        %a.anchor{:href => "#block-signup"} Signup

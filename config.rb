@@ -22,8 +22,8 @@ end
 
 # Helpers
 helpers do
-  def some_helper(*args)
-    "Helping"
+  def icon(image_name, title)
+    image_tag "/stylesheets/themes/activo/images/session/#{image_name}.png", :alt => title, :title => title
   end
 end
 
