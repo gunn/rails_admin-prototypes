@@ -1,3 +1,5 @@
+require "dummy"
+
 Sinatra::Base.mime_type :woff, "application/x-font-woff"
 
 # Automatic sitemaps
@@ -24,6 +26,10 @@ end
 helpers do
   def icon(image_name, title)
     image_tag "/stylesheets/themes/activo/images/session/#{image_name}.png", :alt => title, :title => title
+  end
+  
+  def history_link user, text
+    content_tag :p, "<b>#{user}</b> #{text}"
   end
 end
 

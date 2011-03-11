@@ -1,0 +1,5 @@
+.flash
+  - %w[error warning notice].each do |flash|
+    - if params[flash]
+      .message{ :class => flash }
+        %p= params[flash]

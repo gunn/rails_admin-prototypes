@@ -1,0 +1,59 @@
+#block-tables.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first.active
+        %a{:href => "#block-text"} Index
+      %li.disabled
+        %a{:href => "#block-tables"} Show
+      %li.disabled
+        %a{:href => "#block-forms"} Edit
+  .content
+    .control
+      %a.button{:href => "#"}
+        %img{:alt => "Add", :src => "/stylesheets/themes/activo/images/icons/add.png"}/
+        Add
+      %a.button{:href => "#"}
+        %img{:alt => "Remove", :src => "/stylesheets/themes/activo/images/icons/delete.png"}/
+        Remove
+    %h2.title Players
+    .inner
+      = partial :flash_messages
+      %form.form{:action => "#"}
+        %table.table
+          %tr
+            %th.first
+              %input.checkbox.toggle{:type => "checkbox"}/
+            %th ID
+            %th Hometown
+            %th Name
+            %th Surname
+            %th.last &nbsp;
+          - 20.times do |n|
+            %tr{ :class => (n%2==0 ? "odd" : "even" ) }
+              %td
+                %input.checkbox{:name => "id", :type => "checkbox", :value => "1"}/
+              %td= n+1
+              %td= Dummy.magic_data("city", :string)
+              %td= Dummy.magic_data("first_name", :string)
+              %td= Dummy.magic_data("last_name", :string)
+              %td.last
+                %a{:href => "#"}<
+                  %img{:alt => "Show", :onmouseout => "this.src='/stylesheets/themes/activo/images/icons/24/show.png'", :onmouseover => "this.src='/stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'", :src => "/stylesheets/themes/activo/images/icons/24/show.png", :title => "Show"}/
+                %a{:href => "#"}<
+                  %img{:alt => "Edit", :onmouseout => "this.src='/stylesheets/themes/activo/images/icons/24/edit.png'", :onmouseover => "this.src='/stylesheets/themes/activo/images/icons/24/edit-hover.png'", :src => "/stylesheets/themes/activo/images/icons/24/edit.png", :title => "Edit"}/
+                %a{:href => "#"}<
+                  %img{:alt => "Download", :onmouseout => "this.src='/stylesheets/themes/activo/images/icons/24/download.png'", :onmouseover => "this.src='/stylesheets/themes/activo/images/icons/24/download-hover.png'", :src => "/stylesheets/themes/activo/images/icons/24/download.png", :title => "Download"}/
+        .pagination
+          %span.disabled.prev_page « Previous
+          %span.current 1
+          %a{:href => "#", :rel => "next"} 2
+          %a{:href => "#"} 3
+          %a{:href => "#"} 4
+          %a{:href => "#"} 5
+          %a.next_page{:href => "#", :rel => "next"} Next »
+      %form.search{:action => "#"}
+        .columns.wat-cf
+          .column.right
+            %input.search_submit{:name => "commit", :type => "submit", :value => ""}/
+            %input#search.search_box{:name => "search", :onblur => "if (!value) { value = 'Search' }", :onfocus => "if (value == 'Search') { value = '' }", :type => "text", :value => "Search"}/
+      .wat-cf
