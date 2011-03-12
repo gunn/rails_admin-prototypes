@@ -1,16 +1,16 @@
 = Rails Admin Prototypes
 
-This project contains mockups for the rails_admin[link:https://github.com/sferik/rails_admin] project. They are currently focussed on trying to figure out how best to integrate the {activo theme}[http://activo.dmfranc.com/] into it.
+This project contains mockups for the rails_admin[link:http://github.com/sferik/rails_admin] project. They are currently focussed on trying to figure out how best to integrate the {activo theme}[http://activo.dmfranc.com/] into it.
 
-Currently this project consists of some mouckps in 'mockups', the source files in 'fireworks_pngs' and a site runnable by middleman[link:https://github.com/tdreyno/middleman].
+Currently this project consists of some mouckps in 'mockups', the source files in 'fireworks_pngs' and a site runnable by middleman[link:http://github.com/tdreyno/middleman].
 
 Please fork and improve!
 
 == The new look
-link:https://github.com/gunn/rails_admin-prototypes/raw/master/mockups/main.png
+link:http://github.com/gunn/rails_admin-prototypes/raw/master/mockups/main.png
 
 == In detail
-link:https://github.com/gunn/rails_admin-prototypes/raw/master/mockups/main_with_highlights.png
+link:http://github.com/gunn/rails_admin-prototypes/raw/master/mockups/main_with_highlights.png
 
 1. Links to the sites root page and the dashboard
 2. Links for the currently logged in user - prefernces and logout
@@ -19,34 +19,34 @@ link:https://github.com/gunn/rails_admin-prototypes/raw/master/mockups/main_with
 5. History for the current model.
 
 == A login page
-link:https://github.com/gunn/rails_admin-prototypes/raw/master/mockups/login.png
+link:http://github.com/gunn/rails_admin-prototypes/raw/master/mockups/login.png
 
 == Nav links in sidebar
-link:https://github.com/gunn/rails_admin-prototypes/raw/master/mockups/nav_in_sidebar.png
+link:http://github.com/gunn/rails_admin-prototypes/raw/master/mockups/nav_in_sidebar.png
 
 Alternative placement for the navigation links, frees up header some more. Possibly these could be removed altogther and be covered by the user icons in the top right.
 
 == Error flash message
-link:https://github.com/gunn/rails_admin-prototypes/raw/master/mockups/error.png
+link:http://github.com/gunn/rails_admin-prototypes/raw/master/mockups/error.png
 
 == Error inline
-link:https://github.com/gunn/rails_admin-prototypes/raw/master/mockups/error_inline.png
+link:http://github.com/gunn/rails_admin-prototypes/raw/master/mockups/error_inline.png
 
 Compact, but might be a mistake if we ever wanted to show more than one flash message at a time.
 
 == Error above
-link:https://github.com/gunn/rails_admin-prototypes/raw/master/mockups/error_above.png
+link:http://github.com/gunn/rails_admin-prototypes/raw/master/mockups/error_above.png
 
 == Dark header
-link:https://github.com/gunn/rails_admin-prototypes/raw/master/mockups/dark_header.png
+link:http://github.com/gunn/rails_admin-prototypes/raw/master/mockups/dark_header.png
 
 Alternative style.
 
 == Dark with high_buttons
-link:https://github.com/gunn/rails_admin-prototypes/raw/master/mockups/dark_header_high_buttons.png
+link:http://github.com/gunn/rails_admin-prototypes/raw/master/mockups/dark_header_high_buttons.png
 
 == Dark with darkened buttons
-link:https://github.com/gunn/rails_admin-prototypes/raw/master/mockups/dark_header_dark_buttons.png
+link:http://github.com/gunn/rails_admin-prototypes/raw/master/mockups/dark_header_dark_buttons.png
 
 
 Started 2011, Arthur Gunn, released under the MIT license.
