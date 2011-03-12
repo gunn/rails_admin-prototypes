@@ -1,0 +1,54 @@
+# Rails Admin Prototypes
+
+This project contains mockups for the [rails_admin](https://github.com/sferik/rails_admin) project. They are currently focussed on trying to figure out how best to integrate the [activo theme](http://activo.dmfranc.com/) into it.
+
+Currently this project consists of some images in 'mockups', the source files in 'fireworks_pngs' and a site runnable by [middleman](https://github.com/tdreyno/middleman).
+
+Please fork and improve!
+
+## The new look
+![new look](https://github.com/gunn/rails_admin-prototypes/raw/master/mockups/main.png)
+
+## In detail
+![detail](https://github.com/gunn/rails_admin-prototypes/raw/master/mockups/main_with_highlights.png)
+
+1. Links to the sites root page and the dashboard
+2. Links for the currently logged in user - prefernces and logout
+3. Links to each of the models managed by rails_admin. These replaces our current tabs. Putting them here means we don't have to worry about them overflowing.
+4. Tabs for Index, Show and Edit. When on a speific players view page in the example, the Index and Edit tabs would be active providing an easy way to jump to one of those.
+5. History for the current model.
+
+## A login page
+![login page](https://github.com/gunn/rails_admin-prototypes/raw/master/mockups/login.png)
+
+## Nav links in sidebar
+![Nav links in sidebar](https://github.com/gunn/rails_admin-prototypes/raw/master/mockups/nav_in_sidebar.png)
+
+Alternative placement for the navigation links, frees up header some more. Possibly these could be removed altogther and be covered by the user icons in the top right.
+
+## Error flash message
+![Error](https://github.com/gunn/rails_admin-prototypes/raw/master/mockups/error.png)
+
+## Error inline
+![Error inline](https://github.com/gunn/rails_admin-prototypes/raw/master/mockups/error_inline.png)
+
+Compact, but might be a mistake if we ever wanted to show more than one flash message at a time.
+
+## Error above
+![Error above](https://github.com/gunn/rails_admin-prototypes/raw/master/mockups/error_above.png)
+
+## Dark header
+![Dark header](https://github.com/gunn/rails_admin-prototypes/raw/master/mockups/dark_header.png)
+
+Alternative style.
+
+## Dark with high_buttons
+![Alternative style](https://github.com/gunn/rails_admin-prototypes/raw/master/mockups/dark_header_high_buttons.png)
+
+## Dark with darkened buttons
+![Dark with darkened buttons](https://github.com/gunn/rails_admin-prototypes/raw/master/mockups/dark_header_dark_buttons.png)
+
+### So, what do you think?
+
+Started 2011, Arthur Gunn, released under the MIT license.
+Lot's of thanks to David Francisco for the theme, and everyone who's contributed to the web-app-theme, and rails_admin projects.
