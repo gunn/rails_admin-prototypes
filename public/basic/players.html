@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
+    <title>Rails Admin Prototype</title>
+    <link href='http://activo.dmfranc.com/favicon.png' rel='shortcut icon' />
+    <link href="../stylesheets/base.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="../stylesheets/jquery-ui.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="../stylesheets/formtastic.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="../stylesheets/jquery.tipsy.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="../stylesheets/uniform.default.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href='../stylesheets/themes/activo/style.css' id='current-theme' media='screen' rel='stylesheet' type='text/css' />
+    <script src="../javascripts/jquery-1.4.4.min.js" type="text/javascript"></script>
+    <script src="../javascripts/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="../javascripts/jquery.scrollTo.js" type="text/javascript"></script>
+    <script src="../javascripts/jquery.localscroll.js" type="text/javascript"></script>
+    <script src="../javascripts/application.js" type="text/javascript"></script>
+    <script src="../javascripts/jquery.tipsy.js" type="text/javascript"></script>
+    <script src="../javascripts/jquery.uniform.min.js" type="text/javascript"></script>
+    <style type='text/css'>
+      /*<![CDATA[*/
+        .secondary-navigation ul li.disabled a {
+          color: #AAA;
+        }
+      /*]]>*/
+    </style>
+  </head>
+  <body>
+    <div id='container'>
+      <div id='header'>
+        <h1></h1>
+        <div id='user-navigation'>
+          <ul class='wat-cf'>
+            <li><a href="#"><img alt="Dashboard" title="Dashboard" src="../stylesheets/themes/activo/images/session/home.png" /></a></li>
+            <li><a href="#"><img alt="Profile" title="Profile" src="../stylesheets/themes/activo/images/session/account.png" /></a></li>
+            <li><a href="#"><img alt="Preferences" title="Preferences" src="../stylesheets/themes/activo/images/session/config.png" /></a></li>
+            <li><a href="#"><img alt="Logout" title="Logout" src="../stylesheets/themes/activo/images/session/logout.png" /></a></li>
+          </ul>
+        </div>
+        <div id='main-navigation'>
+          <ul class='wat-cf'>
+            <li class='first'>
+              <a class='anchor' href='#block-text'>Main Page</a>
+            </li>
+            <li>
+              <a class='anchor' href='#block-text'>Dashboard</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class='wat-cf' id='wrapper'>
+        <div id='main'>
+          <div class='block' id='block-tables'>
+            <div class='secondary-navigation'>
+              <ul class='wat-cf'>
+                <li class='first active'>
+                  <a href='#block-text'>Index</a>
+                </li>
+                <li class='disabled'>
+                  <a href='#block-tables'>Show</a>
+                </li>
+                <li class='disabled'>
+                  <a href='#block-forms'>Edit</a>
+                </li>
+              </ul>
+            </div>
+            <div class='content'>
+              <div class='control'>
+                <a class='button' href='#'>
+                  <img alt='Add' src='../stylesheets/themes/activo/images/icons/add.png' />
+                  Add
+                </a>
+                <a class='button' href='#'>
+                  <img alt='Remove' src='../stylesheets/themes/activo/images/icons/delete.png' />
+                  Remove
+                </a>
+              </div>
+              <h2 class='title'>Players</h2>
+              <div class='inner'>
+                <div class='flash'>
+                </div>
+                <form action='#' class='form'>
+                  <table class='table'>
+                    <tr>
+                      <th class='first'>
+                        <input class='checkbox toggle' type='checkbox' />
+                      </th>
+                      <th>ID</th>
+                      <th>Hometown</th>
+                      <th>Name</th>
+                      <th>Surname</th>
+                      <th class='last'>&nbsp;</th>
+                    </tr>
+                    <tr class='odd'>
+                      <td>
+                        <input class='checkbox' name='id' type='checkbox' value='1' />
+                      </td>
+                      <td>1</td>
+                      <td>Anaheim</td>
+                      <td>Anibal</td>
+                      <td>Wisoky</td>
+                      <td class='last'>
+                        <a href='#'><img alt='Show' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/show.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'" src='../stylesheets/themes/activo/images/icons/24/show.png' title='Show' /></a>
+                        <a href='#'><img alt='Edit' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/edit.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/edit-hover.png'" src='../stylesheets/themes/activo/images/icons/24/edit.png' title='Edit' /></a>
+                        <a href='#'><img alt='Download' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/download.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/download-hover.png'" src='../stylesheets/themes/activo/images/icons/24/download.png' title='Download' /></a>
+                      </td>
+                    </tr>
+                    <tr class='even'>
+                      <td>
+                        <input class='checkbox' name='id' type='checkbox' value='1' />
+                      </td>
+                      <td>2</td>
+                      <td>Salt Lake City</td>
+                      <td>Destini</td>
+                      <td>Mann</td>
+                      <td class='last'>
+                        <a href='#'><img alt='Show' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/show.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'" src='../stylesheets/themes/activo/images/icons/24/show.png' title='Show' /></a>
+                        <a href='#'><img alt='Edit' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/edit.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/edit-hover.png'" src='../stylesheets/themes/activo/images/icons/24/edit.png' title='Edit' /></a>
+                        <a href='#'><img alt='Download' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/download.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/download-hover.png'" src='../stylesheets/themes/activo/images/icons/24/download.png' title='Download' /></a>
+                      </td>
+                    </tr>
+                    <tr class='odd'>
+                      <td>
+                        <input class='checkbox' name='id' type='checkbox' value='1' />
+                      </td>
+                      <td>3</td>
+                      <td>Kansas City</td>
+                      <td>Angelina</td>
+                      <td>Cartwright</td>
+                      <td class='last'>
+                        <a href='#'><img alt='Show' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/show.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'" src='../stylesheets/themes/activo/images/icons/24/show.png' title='Show' /></a>
+                        <a href='#'><img alt='Edit' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/edit.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/edit-hover.png'" src='../stylesheets/themes/activo/images/icons/24/edit.png' title='Edit' /></a>
+                        <a href='#'><img alt='Download' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/download.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/download-hover.png'" src='../stylesheets/themes/activo/images/icons/24/download.png' title='Download' /></a>
+                      </td>
+                    </tr>
+                    <tr class='even'>
+                      <td>
+                        <input class='checkbox' name='id' type='checkbox' value='1' />
+                      </td>
+                      <td>4</td>
+                      <td>Costa Mesa</td>
+                      <td>Stephania</td>
+                      <td>Paucek</td>
+                      <td class='last'>
+                        <a href='#'><img alt='Show' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/show.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'" src='../stylesheets/themes/activo/images/icons/24/show.png' title='Show' /></a>
+                        <a href='#'><img alt='Edit' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/edit.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/edit-hover.png'" src='../stylesheets/themes/activo/images/icons/24/edit.png' title='Edit' /></a>
+                        <a href='#'><img alt='Download' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/download.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/download-hover.png'" src='../stylesheets/themes/activo/images/icons/24/download.png' title='Download' /></a>
+                      </td>
+                    </tr>
+                    <tr class='odd'>
+                      <td>
+                        <input class='checkbox' name='id' type='checkbox' value='1' />
+                      </td>
+                      <td>5</td>
+                      <td>Elizabeth</td>
+                      <td>Rolando</td>
+                      <td>Kris</td>
+                      <td class='last'>
+                        <a href='#'><img alt='Show' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/show.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'" src='../stylesheets/themes/activo/images/icons/24/show.png' title='Show' /></a>
+                        <a href='#'><img alt='Edit' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/edit.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/edit-hover.png'" src='../stylesheets/themes/activo/images/icons/24/edit.png' title='Edit' /></a>
+                        <a href='#'><img alt='Download' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/download.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/download-hover.png'" src='../stylesheets/themes/activo/images/icons/24/download.png' title='Download' /></a>
+                      </td>
+                    </tr>
+                    <tr class='even'>
+                      <td>
+                        <input class='checkbox' name='id' type='checkbox' value='1' />
+                      </td>
+                      <td>6</td>
+                      <td>Hollywood</td>
+                      <td>Davion</td>
+                      <td>Eichmann</td>
+                      <td class='last'>
+                        <a href='#'><img alt='Show' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/show.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'" src='../stylesheets/themes/activo/images/icons/24/show.png' title='Show' /></a>
+                        <a href='#'><img alt='Edit' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/edit.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/edit-hover.png'" src='../stylesheets/themes/activo/images/icons/24/edit.png' title='Edit' /></a>
+                        <a href='#'><img alt='Download' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/download.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/download-hover.png'" src='../stylesheets/themes/activo/images/icons/24/download.png' title='Download' /></a>
+                      </td>
+                    </tr>
+                    <tr class='odd'>
+                      <td>
+                        <input class='checkbox' name='id' type='checkbox' value='1' />
+                      </td>
+                      <td>7</td>
+                      <td>Shreveport</td>
+                      <td>Lane</td>
+                      <td>Dicki</td>
+                      <td class='last'>
+                        <a href='#'><img alt='Show' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/show.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'" src='../stylesheets/themes/activo/images/icons/24/show.png' title='Show' /></a>
+                        <a href='#'><img alt='Edit' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/edit.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/edit-hover.png'" src='../stylesheets/themes/activo/images/icons/24/edit.png' title='Edit' /></a>
+                        <a href='#'><img alt='Download' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/download.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/download-hover.png'" src='../stylesheets/themes/activo/images/icons/24/download.png' title='Download' /></a>
+                      </td>
+                    </tr>
+                    <tr class='even'>
+                      <td>
+                        <input class='checkbox' name='id' type='checkbox' value='1' />
+                      </td>
+                      <td>8</td>
+                      <td>Boise</td>
+                      <td>Albertha</td>
+                      <td>Harvey</td>
+                      <td class='last'>
+                        <a href='#'><img alt='Show' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/show.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'" src='../stylesheets/themes/activo/images/icons/24/show.png' title='Show' /></a>
+                        <a href='#'><img alt='Edit' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/edit.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/edit-hover.png'" src='../stylesheets/themes/activo/images/icons/24/edit.png' title='Edit' /></a>
+                        <a href='#'><img alt='Download' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/download.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/download-hover.png'" src='../stylesheets/themes/activo/images/icons/24/download.png' title='Download' /></a>
+                      </td>
+                    </tr>
+                    <tr class='odd'>
+                      <td>
+                        <input class='checkbox' name='id' type='checkbox' value='1' />
+                      </td>
+                      <td>9</td>
+                      <td>Corona</td>
+                      <td>Hilbert</td>
+                      <td>Pacocha</td>
+                      <td class='last'>
+                        <a href='#'><img alt='Show' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/show.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'" src='../stylesheets/themes/activo/images/icons/24/show.png' title='Show' /></a>
+                        <a href='#'><img alt='Edit' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/edit.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/edit-hover.png'" src='../stylesheets/themes/activo/images/icons/24/edit.png' title='Edit' /></a>
+                        <a href='#'><img alt='Download' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/download.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/download-hover.png'" src='../stylesheets/themes/activo/images/icons/24/download.png' title='Download' /></a>
+                      </td>
+                    </tr>
+                    <tr class='even'>
+                      <td>
+                        <input class='checkbox' name='id' type='checkbox' value='1' />
+                      </td>
+                      <td>10</td>
+                      <td>Tallahassee</td>
+                      <td>Rupert</td>
+                      <td>Abshire</td>
+                      <td class='last'>
+                        <a href='#'><img alt='Show' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/show.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'" src='../stylesheets/themes/activo/images/icons/24/show.png' title='Show' /></a>
+                        <a href='#'><img alt='Edit' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/edit.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/edit-hover.png'" src='../stylesheets/themes/activo/images/icons/24/edit.png' title='Edit' /></a>
+                        <a href='#'><img alt='Download' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/download.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/download-hover.png'" src='../stylesheets/themes/activo/images/icons/24/download.png' title='Download' /></a>
+                      </td>
+                    </tr>
+                    <tr class='odd'>
+                      <td>
+                        <input class='checkbox' name='id' type='checkbox' value='1' />
+                      </td>
+                      <td>11</td>
+                      <td>New Orleans</td>
+                      <td>Rubie</td>
+                      <td>Stark</td>
+                      <td class='last'>
+                        <a href='#'><img alt='Show' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/show.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'" src='../stylesheets/themes/activo/images/icons/24/show.png' title='Show' /></a>
+                        <a href='#'><img alt='Edit' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/edit.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/edit-hover.png'" src='../stylesheets/themes/activo/images/icons/24/edit.png' title='Edit' /></a>
+                        <a href='#'><img alt='Download' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/download.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/download-hover.png'" src='../stylesheets/themes/activo/images/icons/24/download.png' title='Download' /></a>
+                      </td>
+                    </tr>
+                    <tr class='even'>
+                      <td>
+                        <input class='checkbox' name='id' type='checkbox' value='1' />
+                      </td>
+                      <td>12</td>
+                      <td>Winston-Salem</td>
+                      <td>Brandi</td>
+                      <td>Russel</td>
+                      <td class='last'>
+                        <a href='#'><img alt='Show' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/show.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'" src='../stylesheets/themes/activo/images/icons/24/show.png' title='Show' /></a>
+                        <a href='#'><img alt='Edit' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/edit.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/edit-hover.png'" src='../stylesheets/themes/activo/images/icons/24/edit.png' title='Edit' /></a>
+                        <a href='#'><img alt='Download' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/download.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/download-hover.png'" src='../stylesheets/themes/activo/images/icons/24/download.png' title='Download' /></a>
+                      </td>
+                    </tr>
+                    <tr class='odd'>
+                      <td>
+                        <input class='checkbox' name='id' type='checkbox' value='1' />
+                      </td>
+                      <td>13</td>
+                      <td>Sterling Heights</td>
+                      <td>Felton</td>
+                      <td>Christiansen</td>
+                      <td class='last'>
+                        <a href='#'><img alt='Show' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/show.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'" src='../stylesheets/themes/activo/images/icons/24/show.png' title='Show' /></a>
+                        <a href='#'><img alt='Edit' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/edit.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/edit-hover.png'" src='../stylesheets/themes/activo/images/icons/24/edit.png' title='Edit' /></a>
+                        <a href='#'><img alt='Download' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/download.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/download-hover.png'" src='../stylesheets/themes/activo/images/icons/24/download.png' title='Download' /></a>
+                      </td>
+                    </tr>
+                    <tr class='even'>
+                      <td>
+                        <input class='checkbox' name='id' type='checkbox' value='1' />
+                      </td>
+                      <td>14</td>
+                      <td>Fremont</td>
+                      <td>Rebekah</td>
+                      <td>Kirlin</td>
+                      <td class='last'>
+                        <a href='#'><img alt='Show' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/show.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'" src='../stylesheets/themes/activo/images/icons/24/show.png' title='Show' /></a>
+                        <a href='#'><img alt='Edit' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/edit.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/edit-hover.png'" src='../stylesheets/themes/activo/images/icons/24/edit.png' title='Edit' /></a>
+                        <a href='#'><img alt='Download' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/download.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/download-hover.png'" src='../stylesheets/themes/activo/images/icons/24/download.png' title='Download' /></a>
+                      </td>
+                    </tr>
+                    <tr class='odd'>
+                      <td>
+                        <input class='checkbox' name='id' type='checkbox' value='1' />
+                      </td>
+                      <td>15</td>
+                      <td>Tempe</td>
+                      <td>Mervin</td>
+                      <td>Cummings</td>
+                      <td class='last'>
+                        <a href='#'><img alt='Show' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/show.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'" src='../stylesheets/themes/activo/images/icons/24/show.png' title='Show' /></a>
+                        <a href='#'><img alt='Edit' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/edit.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/edit-hover.png'" src='../stylesheets/themes/activo/images/icons/24/edit.png' title='Edit' /></a>
+                        <a href='#'><img alt='Download' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/download.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/download-hover.png'" src='../stylesheets/themes/activo/images/icons/24/download.png' title='Download' /></a>
+                      </td>
+                    </tr>
+                    <tr class='even'>
+                      <td>
+                        <input class='checkbox' name='id' type='checkbox' value='1' />
+                      </td>
+                      <td>16</td>
+                      <td>Fresno</td>
+                      <td>Mateo</td>
+                      <td>Wilderman</td>
+                      <td class='last'>
+                        <a href='#'><img alt='Show' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/show.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'" src='../stylesheets/themes/activo/images/icons/24/show.png' title='Show' /></a>
+                        <a href='#'><img alt='Edit' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/edit.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/edit-hover.png'" src='../stylesheets/themes/activo/images/icons/24/edit.png' title='Edit' /></a>
+                        <a href='#'><img alt='Download' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/download.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/download-hover.png'" src='../stylesheets/themes/activo/images/icons/24/download.png' title='Download' /></a>
+                      </td>
+                    </tr>
+                    <tr class='odd'>
+                      <td>
+                        <input class='checkbox' name='id' type='checkbox' value='1' />
+                      </td>
+                      <td>17</td>
+                      <td>Elk Grove</td>
+                      <td>Jeanie</td>
+                      <td>Williamson</td>
+                      <td class='last'>
+                        <a href='#'><img alt='Show' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/show.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'" src='../stylesheets/themes/activo/images/icons/24/show.png' title='Show' /></a>
+                        <a href='#'><img alt='Edit' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/edit.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/edit-hover.png'" src='../stylesheets/themes/activo/images/icons/24/edit.png' title='Edit' /></a>
+                        <a href='#'><img alt='Download' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/download.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/download-hover.png'" src='../stylesheets/themes/activo/images/icons/24/download.png' title='Download' /></a>
+                      </td>
+                    </tr>
+                    <tr class='even'>
+                      <td>
+                        <input class='checkbox' name='id' type='checkbox' value='1' />
+                      </td>
+                      <td>18</td>
+                      <td>New Orleans</td>
+                      <td>Darius</td>
+                      <td>Crona</td>
+                      <td class='last'>
+                        <a href='#'><img alt='Show' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/show.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'" src='../stylesheets/themes/activo/images/icons/24/show.png' title='Show' /></a>
+                        <a href='#'><img alt='Edit' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/edit.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/edit-hover.png'" src='../stylesheets/themes/activo/images/icons/24/edit.png' title='Edit' /></a>
+                        <a href='#'><img alt='Download' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/download.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/download-hover.png'" src='../stylesheets/themes/activo/images/icons/24/download.png' title='Download' /></a>
+                      </td>
+                    </tr>
+                    <tr class='odd'>
+                      <td>
+                        <input class='checkbox' name='id' type='checkbox' value='1' />
+                      </td>
+                      <td>19</td>
+                      <td>Daly City</td>
+                      <td>Margaretta</td>
+                      <td>Orn</td>
+                      <td class='last'>
+                        <a href='#'><img alt='Show' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/show.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'" src='../stylesheets/themes/activo/images/icons/24/show.png' title='Show' /></a>
+                        <a href='#'><img alt='Edit' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/edit.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/edit-hover.png'" src='../stylesheets/themes/activo/images/icons/24/edit.png' title='Edit' /></a>
+                        <a href='#'><img alt='Download' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/download.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/download-hover.png'" src='../stylesheets/themes/activo/images/icons/24/download.png' title='Download' /></a>
+                      </td>
+                    </tr>
+                    <tr class='even'>
+                      <td>
+                        <input class='checkbox' name='id' type='checkbox' value='1' />
+                      </td>
+                      <td>20</td>
+                      <td>Fremont</td>
+                      <td>Sammy</td>
+                      <td>Schoen</td>
+                      <td class='last'>
+                        <a href='#'><img alt='Show' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/show.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/show-hover.png?1279417407'" src='../stylesheets/themes/activo/images/icons/24/show.png' title='Show' /></a>
+                        <a href='#'><img alt='Edit' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/edit.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/edit-hover.png'" src='../stylesheets/themes/activo/images/icons/24/edit.png' title='Edit' /></a>
+                        <a href='#'><img alt='Download' onmouseout="this.src='../stylesheets/themes/activo/images/icons/24/download.png'" onmouseover="this.src='../stylesheets/themes/activo/images/icons/24/download-hover.png'" src='../stylesheets/themes/activo/images/icons/24/download.png' title='Download' /></a>
+                      </td>
+                    </tr>
+                  </table>
+                  <div class='pagination'>
+                    <span class='disabled prev_page'>« Previous</span>
+                    <span class='current'>1</span>
+                    <a href='#' rel='next'>2</a>
+                    <a href='#'>3</a>
+                    <a href='#'>4</a>
+                    <a href='#'>5</a>
+                    <a class='next_page' href='#' rel='next'>Next »</a>
+                  </div>
+                </form>
+                <form action='#' class='search'>
+                  <div class='columns wat-cf'>
+                    <div class='column right'>
+                      <input class='search_submit' name='commit' type='submit' value='' />
+                      <input class='search_box' id='search' name='search' onblur="if (!value) { value = 'Search' }" onfocus="if (value == 'Search') { value = '' }" type='text' value='Search' />
+                    </div>
+                  </div>
+                </form>
+                <div class='wat-cf'></div>
+              </div>
+            </div>
+          </div>
+          <div id='footer'>
+            <p>David Francisco / hello@dmfranc.com / activo.dmfranc.com</p>
+          </div>
+        </div>
+        <div id='sidebar'>
+          <div class='block'>
+            <h3>Models</h3>
+            <ul class='navigation'>
+              <li><a class="anchor" href="#block-division">Division</a></li>
+              <li><a class="anchor" href="#block-draft">Draft</a></li>
+              <li><a class="anchor" href="#block-league">League</a></li>
+              <li><a class="anchor" href="#block-fan">Fan</a></li>
+              <li><a class="anchor" href="#block-player">Player</a></li>
+            </ul>
+          </div>
+          <div class='block notice'>
+            <h4>Notice Title</h4>
+            <p>Morbi posuere urna vitae nunc. Curabitur ultrices, lorem ac aliquam blandit, lectus eros hendrerit eros, at eleifend libero ipsum hendrerit urna. Suspendisse viverra.</p>
+          </div>
+          <div class='block'>
+            <div class='sidebar-block'>
+              <h4>History</h4>
+              <p><b>gunn</b> deleted player #5</p>
+              <p><b>gunn</b> created player #38</p>
+              <p><b>cameron</b> edited name, surname and hometown for player #39</p>
+              <p><b>cameron</b> created player #39</p>
+              <p><b>cameron</b> created player #40</p>
+              <p><b>gunn</b> created player #41</p>
+              <p><b>cameron</b> created team #2</p>
+              <p><b>gunn</b> created player #42</p>
+              <p>
+                <span><a href="#">and <b>75 more</b> changes</a></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

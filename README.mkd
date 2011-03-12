@@ -2,7 +2,7 @@
 
 This project contains mockups for the [rails_admin](https://github.com/sferik/rails_admin) project. They are currently focussed on trying to figure out how best to integrate the [activo theme](http://activo.dmfranc.com/) into it.
 
-Currently this project consists of some images in 'mockups', the source files in 'fireworks_pngs' and a site runnable by [middleman](https://github.com/tdreyno/middleman).
+Currently this project consists of some images in `mockups`, the source files in `fireworks_pngs`, a demo html page at `public/basic/players.html`, and a site runnable by [middleman](https://github.com/tdreyno/middleman).
 
 Please fork and improve!
 
