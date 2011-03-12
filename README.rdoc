@@ -1,4 +1,4 @@
-= Rails Admin Mockups
+= Rails Admin Prototypes
 
 This project contains mockups for the rails_admin[https://github.com/sferik/rails_admin] project. They are currently focussed on trying to figure out how best to integrate the {activo theme}[http://activo.dmfranc.com/] into it.
 
@@ -7,10 +7,10 @@ Currently this project consists of some mouckps in 'mockups', the source files i
 Please fork and improve!
 
 == The new look
-link:mockups/main.png
+link:https://github.com/gunn/rails_admin-prototypes/mockups/main.png
 
 == In detail
-link:mockups/main_with_highlights.png
+link:https://github.com/gunn/rails_admin-prototypes/mockups/main_with_highlights.png
 
 1. Links to the sites root page and the dashboard
 2. Links for the currently logged in user - prefernces and logout
@@ -19,34 +19,34 @@ link:mockups/main_with_highlights.png
 5. History for the current model.
 
 == A login page
-link:mockups/login.png
+link:https://github.com/gunn/rails_admin-prototypes/mockups/login.png
 
 == Nav links in sidebar
-link:mockups/nav_in_sidebar.png
+link:https://github.com/gunn/rails_admin-prototypes/mockups/nav_in_sidebar.png
 
 Alternative placement for the navigation links, frees up header some more. Possibly these could be removed altogther and be covered by the user icons in the top right.
 
 == Error flash message
-link:mockups/error.png
+link:https://github.com/gunn/rails_admin-prototypes/mockups/error.png
 
 == Error inline
-link:mockups/error_inline.png
+link:https://github.com/gunn/rails_admin-prototypes/mockups/error_inline.png
 
 Compact, but might be a mistake if we ever wanted to show more than one flash message at a time.
 
 == Error above
-link:mockups/error_above.png
+link:https://github.com/gunn/rails_admin-prototypes/mockups/error_above.png
 
 == Dark header
-link:mockups/dark_header.png
+link:https://github.com/gunn/rails_admin-prototypes/mockups/dark_header.png
 
 Alternative style.
 
 == Dark with high_buttons
-link:mockups/dark_header_high_buttons.png
+link:https://github.com/gunn/rails_admin-prototypes/mockups/dark_header_high_buttons.png
 
 == Dark with darkened buttons
-link:mockups/dark_header_dark_buttons.png
+link:https://github.com/gunn/rails_admin-prototypes/mockups/dark_header_dark_buttons.png
 
 
 Started 2011, Arthur Gunn, released under the MIT license.
