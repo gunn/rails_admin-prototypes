@@ -12,8 +12,8 @@ Please fork and improve!
 ## In detail
 ![detail](https://github.com/gunn/rails_admin-prototypes/raw/master/mockups/main_with_highlights.png)
 
-1. Links to the sites root page and the dashboard
-2. Links for the currently logged in user - prefernces and logout
+1. Links to the site's root page and the dashboard
+2. Links for the currently logged in user - preferences and logout
 3. Links to each of the models managed by rails_admin. These replaces our current tabs. Putting them here means we don't have to worry about them overflowing.
 4. Tabs for Index, Show and Edit. When on a speific players view page in the example, the Index and Edit tabs would be active providing an easy way to jump to one of those.
 5. History for the current model.
